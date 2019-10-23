@@ -1,0 +1,26 @@
+<mat-card>
+        <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+                <mat-form-field>
+                        <input matInput type="id" ngModel name="id" placeholder="Enter Your Id">
+
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput type="text" placeholder="Enter Your Name" name="title" ngModel required
+                                minlength="5" #title="ngModel">
+
+                </mat-form-field>
+                <mat-form-field>
+                        <textarea matInput rows="6" ngModel name="content" placeholder="Enter Your Content" required
+                                #content="ngModel"> </textarea>
+
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput type="email" ngModel name="email" placeholder="Enter Your Email" required>
+
+                </mat-form-field>
+
+
+                <button mat-raised-button color="accent" type="submit">Save Post</button>
+        </form>
+
+</mat-card>
